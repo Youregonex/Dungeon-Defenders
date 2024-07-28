@@ -11,5 +11,13 @@ namespace Youregone.FinalCharacterController
             CurrentPlayerMovementState = movementState;
         }
 
+        public bool IsInGroundedState()
+        {
+            return CurrentPlayerMovementState == EPlayerMovementState.Idling ||
+                   CurrentPlayerMovementState == EPlayerMovementState.Running ||
+                   CurrentPlayerMovementState == EPlayerMovementState.Sprinting ||
+                   CurrentPlayerMovementState == EPlayerMovementState.Walking;
+        }
+
     }
 }
